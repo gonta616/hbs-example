@@ -1,5 +1,20 @@
+{{!-- Condition --}}
+{{#if showTitle}}
 <h1>{{title}}</h1>
+{{/if}}
+
+{{!-- Partials --}}
 <p>Welcome to {{title}}</p>
 {{> partial1}}
+{{> partial2}}
+
+{{!-- Helper --}}
 {{hostname}}
 {{fullname author}}
+
+{{!-- iterate --}}
+<ul>
+  {{#each members}}
+  <li>Name: {{this.name}} Role:{{this.role}}</li>
+  {{/each}}
+</ul>
